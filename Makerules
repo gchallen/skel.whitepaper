@@ -12,11 +12,14 @@ TEXFILES = $(shell find . -name "*.tex")
 # 							enabling/disabling Bibtex as needed.
 
 .deps: $(TEXFILES)
-	./bin/texincludes .deps
+	./bin/texincludes .deps whitepaper.cls
 include .deps
 
 %.ps : %.pdf
 	acroread -toPostScript $<
+
+allclean: rulesclean
+	@/bin/rm -f .deps
 	
 rulesclean:
 	@/bin/rm -f *.dvi *.aux *.ps *~ *.log *.lot *.lof *.toc *.blg *.bbl url.sty *.out *.bak *.pdf

@@ -68,7 +68,8 @@ for f in files:
   if docitations:
     all_files.append(fbasename + ".blg")
   all_files.extend(graphic_files) 
-  all_files.append("whitepaper.cls")
+  for file in args[1:]:
+    all_files.append(file)
   allnames.append(fbasename)
 
   print >>output, "%s : LOG := %s.log" % (fbasename, fbasename)
