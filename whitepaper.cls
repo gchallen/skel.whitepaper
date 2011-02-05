@@ -84,7 +84,7 @@
 \begin{minipage}[t]{0.18\textwidth}
 \vspace{0pt}
 \raggedleft
-{\scshape WhitePaper}
+{\scshape Whitepaper}
 \end{minipage}}
   \renewcommand{\afterchaptertitle}{\vspace{0.5\onelineskip} \hrule \vspace{0.5\onelineskip}}
 } 
